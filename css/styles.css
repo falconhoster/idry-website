@@ -385,7 +385,7 @@ h4 { font-size: 1.1rem; }
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+    background: linear-gradient(135deg, rgba(14, 58, 86, 0.85) 0%, rgba(26, 82, 118, 0.80) 50%, rgba(41, 128, 185, 0.80) 100%), url('../assets/images/hero-bg.jpg') center / cover no-repeat;
     color: var(--color-white);
     padding: 60px 0 40px;
     overflow: hidden;
