@@ -3,6 +3,59 @@
    Called by components.js after header/footer load.
    ============================================ */
 
+/* --- Google Ads Conversion Tracking ---
+   Uses event delegation on document so it works for both
+   static page content and dynamically injected header/footer. */
+(function () {
+    'use strict';
+
+    function reportCallConversion(url) {
+        if (typeof gtag !== 'function') return;
+        gtag('event', 'conversion', {
+            'send_to': 'AW-351342156/XdPbCKun7_sbEMycxKcB',
+            'value': 1.0,
+            'currency': 'NZD',
+            'event_callback': function () {
+                if (url) window.location = url;
+            }
+        });
+    }
+
+    function reportServiceM8Conversion(url) {
+        if (typeof gtag !== 'function') {
+            if (url) window.open(url, '_blank');
+            return;
+        }
+        gtag('event', 'conversion', {
+            'send_to': 'AW-351342156/XdPbCKun7_sbEMycxKcB',
+            'value': 1.0,
+            'currency': 'NZD'
+        });
+        gtag('event', 'servicem8_booking_click', {
+            'event_category': 'engagement',
+            'event_label': url
+        });
+        if (url) window.open(url, '_blank');
+    }
+
+    document.addEventListener('click', function (e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+
+        // Click-to-call tracking
+        if (href.indexOf('tel:') === 0) {
+            reportCallConversion(href);
+        }
+
+        // ServiceM8 booking button tracking
+        if (href.indexOf('servicem8.com') !== -1) {
+            e.preventDefault();
+            reportServiceM8Conversion(href);
+        }
+    });
+})();
+
 window.idryInit = function () {
     'use strict';
 
