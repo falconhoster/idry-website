@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Spray bottle body -->
+  <rect x="18" y="28" width="20" height="26" rx="3" fill="#1a5276" opacity="0.9"/>
+  <rect x="22" y="22" width="12" height="8" rx="1" fill="#1a5276"/>
+  <!-- Spray nozzle -->
+  <rect x="26" y="16" width="4" height="8" rx="1" fill="#2c3e50"/>
+  <path d="M30 18 L38 14 L38 18 L30 20 Z" fill="#2c3e50"/>
+  <!-- Spray mist dots -->
+  <circle cx="44" cy="10" r="1.5" fill="#3498db" opacity="0.7"/>
+  <circle cx="48" cy="14" r="1.2" fill="#3498db" opacity="0.5"/>
+  <circle cx="42" cy="16" r="1" fill="#3498db" opacity="0.6"/>
+  <circle cx="46" cy="8" r="1" fill="#3498db" opacity="0.4"/>
+  <!-- Sparkle top-right -->
+  <path d="M52 6 L53.5 10 L52 14 L50.5 10 Z" fill="#f39c12"/>
+  <path d="M48 10 L52 8.5 L56 10 L52 11.5 Z" fill="#f39c12"/>
+  <!-- Sparkle small -->
+  <path d="M10 12 L11 14 L10 16 L9 14 Z" fill="#f39c12" opacity="0.7"/>
+  <path d="M8 14 L10 13 L12 14 L10 15 Z" fill="#f39c12" opacity="0.7"/>
+  <!-- Label stripe on bottle -->
+  <rect x="20" y="36" width="16" height="6" rx="1" fill="#ffffff" opacity="0.3"/>
+  <!-- Bubbles -->
+  <circle cx="12" cy="40" r="3" stroke="#3498db" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <circle cx="8" cy="48" r="2" stroke="#3498db" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <circle cx="48" cy="44" r="2.5" stroke="#3498db" stroke-width="1.3" fill="none" opacity="0.5"/>
+  <circle cx="52" cy="52" r="1.8" stroke="#3498db" stroke-width="1" fill="none" opacity="0.4"/>
+</svg>
