@@ -66,6 +66,7 @@
         +         '<li><a href="/areas-we-serve" class="nav-link">Areas We Serve</a></li>'
         +         '<li><a href="/about" class="nav-link">About</a></li>'
         +         '<li><a href="/blog" class="nav-link">Blog</a></li>'
+        +         '<li><a href="/case-studies" class="nav-link">Case Studies</a></li>'
         +         '<li><a href="/contact" class="nav-link">Contact</a></li>'
         +       '</ul>'
         +     '</nav>'
