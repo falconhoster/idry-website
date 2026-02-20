@@ -155,6 +155,8 @@
             link.classList.remove('active');
             if (href === path || (href === '/' && (path === '/' || path === '/index.html' || path.endsWith('/IdryNewWebsite/index.html') || path.endsWith('/IdryNewWebsite/')))) {
                 link.classList.add('active');
+            } else if (href !== '/' && href !== '#services' && path.startsWith(href + '/')) {
+                link.classList.add('active');
             }
         });
     }
