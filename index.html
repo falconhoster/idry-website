@@ -18,10 +18,12 @@
     <meta property="og:site_name" content="iDry Restorations">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
-    <script src="js/components.js"></script>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+    <script src="js/main.js" defer></script>
+    <script src="js/components.js" defer></script>
 
     <!-- Google Ads (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-351342156"></script>
@@ -179,7 +181,10 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/flood-restoration/71b2948d-e218-443d-8b2b-02522649a7d9.JPG" alt="iDry flood restoration equipment and professional team" width="600" height="450" loading="eager">
+                <picture>
+                    <source srcset="assets/images/flood-restoration/71b2948d-e218-443d-8b2b-02522649a7d9.webp" type="image/webp">
+                    <img src="assets/images/flood-restoration/71b2948d-e218-443d-8b2b-02522649a7d9.JPG" alt="iDry flood restoration equipment and professional team" width="600" height="450" loading="eager">
+                </picture>
             </div>
         </div>
     </section>
@@ -222,7 +227,7 @@
                         <img src="assets/images/service-icons/methss.png" alt="" width="64" height="64" loading="lazy">
                     </div>
                     <h3>Meth Decontamination</h3>
-                    <p>Certified meth testing and decontamination. We bring properties back to safe, liveable standards.</p>
+                    <p>We decontaminate meth and bring properties back to safe, liveable standards.</p>
                     <span class="service-card-link">Learn More &rarr;</span>
                 </a>
                 <a href="/biohazard-cleaning-decontamination-service-in-auckland" class="service-card">
@@ -376,16 +381,28 @@
             </div>
             <div class="cert-logos">
                 <div class="cert-logo">
-                    <img src="assets/images/team-portfolio/portfolio-1.jpeg" alt="iDry flood restoration project - water extraction in Auckland home" width="120" height="80" loading="lazy">
+                    <picture>
+                        <source srcset="assets/images/team-portfolio/portfolio-1.webp" type="image/webp">
+                        <img src="assets/images/team-portfolio/portfolio-1.jpeg" alt="iDry flood restoration project - water extraction in Auckland home" width="120" height="80" loading="lazy">
+                    </picture>
                 </div>
                 <div class="cert-logo">
-                    <img src="assets/images/team-portfolio/portfolio-2.jpeg" alt="iDry fire restoration project - smoke damage cleanup in Auckland" width="120" height="80" loading="lazy">
+                    <picture>
+                        <source srcset="assets/images/team-portfolio/portfolio-2.webp" type="image/webp">
+                        <img src="assets/images/team-portfolio/portfolio-2.jpeg" alt="iDry fire restoration project - smoke damage cleanup in Auckland" width="120" height="80" loading="lazy">
+                    </picture>
                 </div>
                 <div class="cert-logo">
-                    <img src="assets/images/team-portfolio/portfolio-3.jpeg" alt="iDry mould remediation project - professional mould removal in Auckland" width="120" height="80" loading="lazy">
+                    <picture>
+                        <source srcset="assets/images/team-portfolio/portfolio-3.webp" type="image/webp">
+                        <img src="assets/images/team-portfolio/portfolio-3.jpeg" alt="iDry mould remediation project - professional mould removal in Auckland" width="120" height="80" loading="lazy">
+                    </picture>
                 </div>
                 <div class="cert-logo">
-                    <img src="assets/images/team-portfolio/portfolio-4.jpeg" alt="iDry restoration project - structural drying equipment deployed" width="120" height="80" loading="lazy">
+                    <picture>
+                        <source srcset="assets/images/team-portfolio/portfolio-4.webp" type="image/webp">
+                        <img src="assets/images/team-portfolio/portfolio-4.jpeg" alt="iDry restoration project - structural drying equipment deployed" width="120" height="80" loading="lazy">
+                    </picture>
                 </div>
                 <div class="cert-logo">
                     <img src="assets/images/team-portfolio/portfolio-5.png" alt="iDry commercial restoration project in Auckland" width="120" height="80" loading="lazy">

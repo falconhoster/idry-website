@@ -18,10 +18,12 @@
     <meta property="og:site_name" content="iDry Restorations">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/main.js"></script>
-    <script src="../js/components.js"></script>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" as="image" href="../assets/images/hero-bg.jpg">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/components.js" defer></script>
 
     <!-- Google Ads (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-351342156"></script>
@@ -305,7 +307,10 @@
                     </div>
                 </div>
                 <div class="lp-services-image">
-                    <img src="../assets/images/projects/picture-405092166.jpg" alt="iDry technicians performing professional biohazard decontamination" width="600" height="500" loading="lazy">
+                    <picture>
+                        <source srcset="../assets/images/projects/picture-405092166.webp" type="image/webp">
+                        <img src="../assets/images/projects/picture-405092166.jpg" alt="iDry technicians performing professional biohazard decontamination" width="600" height="500" loading="lazy">
+                    </picture>
                     <img src="../assets/images/projects/3c58ef17-session.jpg" alt="Biohazard cleaning equipment and hospital-grade disinfection setup" width="600" height="350" loading="lazy">
                 </div>
             </div>
