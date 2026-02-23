@@ -3,6 +3,25 @@
    Mobile-first responsive design
    ============================================ */
 
+/* --- Font Fallbacks (prevent layout shift from web fonts) --- */
+@font-face {
+    font-family: 'Montserrat Fallback';
+    src: local('Arial');
+    size-adjust: 113.2%;
+    ascent-override: 84%;
+    descent-override: 22%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Open Sans Fallback';
+    src: local('Arial');
+    size-adjust: 105.4%;
+    ascent-override: 101%;
+    descent-override: 28%;
+    line-gap-override: 0%;
+}
+
 /* --- CSS Custom Properties --- */
 :root {
     --color-primary: #1a5276;
@@ -21,8 +40,8 @@
     --color-white: #ffffff;
     --color-success: #27ae60;
 
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+    --font-heading: 'Montserrat', 'Montserrat Fallback', sans-serif;
+    --font-body: 'Open Sans', 'Open Sans Fallback', sans-serif;
 
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
