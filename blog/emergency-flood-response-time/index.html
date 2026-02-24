@@ -18,21 +18,33 @@
     <link rel="canonical" href="https://idryrestorations.co.nz/blog/emergency-flood-response-time/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel=&apos;stylesheet&apos;">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap"></noscript>
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=optional"></noscript>
+    <!-- Critical CSS for fast first paint -->
+    <style>@font-face{font-family:'Montserrat Fallback';src:local('Arial');size-adjust:113.2%;ascent-override:84%;descent-override:22%;line-gap-override:0%}@font-face{font-family:'Open Sans Fallback';src:local('Arial');size-adjust:105.4%;ascent-override:101%;descent-override:28%;line-gap-override:0%}:root{--color-primary:#1a5276;--color-primary-dark:#0e3a56;--color-primary-light:#2980b9;--color-accent:#e67e22;--color-accent-dark:#d35400;--color-dark:#1a1a2e;--color-text:#333;--color-text-light:#666;--color-bg:#fff;--color-bg-light:#f8f9fa;--color-border:#e0e6ed;--color-white:#fff;--font-heading:'Montserrat','Montserrat Fallback',sans-serif;--font-body:'Open Sans','Open Sans Fallback',sans-serif;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 12px rgba(0,0,0,.1);--radius-sm:6px;--radius-md:10px;--radius-full:50px;--transition:.3s ease}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--color-text);background:var(--color-bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;line-height:1.2;color:var(--color-dark)}h1{font-size:1.75rem}h2{font-size:1.5rem}h3{font-size:1.15rem}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 16px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;font-family:var(--font-heading);font-size:.9rem;font-weight:600;border-radius:var(--radius-full);border:2px solid transparent;cursor:pointer;white-space:nowrap;min-height:48px;text-align:center}.btn-primary{background:var(--color-accent);color:var(--color-white);border-color:var(--color-accent)}.btn-outline{background:transparent;color:var(--color-white);border-color:var(--color-white)}.btn-lg{padding:14px 28px;font-size:.95rem}#site-header{min-height:60px}.top-bar{display:none}.header{background:var(--color-white);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000}.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:12px}.logo img{height:40px;width:auto}.nav{display:none}.header-cta{display:none}.mobile-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:1001}.mobile-toggle span{width:26px;height:3px;background:var(--color-dark);border-radius:2px}</style>
+    <!-- Full CSS loaded asynchronously -->
+    <link rel="preload" href="../../css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../css/styles.css"></noscript>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google.nl">
     <script src="../../js/main.js" defer></script>
     <script src="../../js/components.js" defer></script>
 
-    <!-- Google Ads (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-351342156"></script>
+    <!-- Google Ads (gtag.js) - deferred until after page load for performance -->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-351342156');
     gtag('config', 'G-CP7V4ECD84');
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-351342156';
+            s.async = true;
+            document.head.appendChild(s);
+        }, 100);
+    });
     </script>
 
     <!-- LocalBusiness Schema -->

@@ -205,6 +205,11 @@ h4 {
     font-size: 0.95rem;
 }
 
+/* --- Site Header Container (reserve space to prevent CLS from JS injection) --- */
+#site-header {
+    min-height: 60px;
+}
+
 /* --- Top Bar --- */
 .top-bar {
     background-color: var(--color-dark);
