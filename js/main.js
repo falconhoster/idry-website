@@ -87,15 +87,22 @@ window.idryInit = function () {
 
     // --- Header Scroll Effect ---
     var header = document.getElementById('header');
+    var isHeaderScrollQueued = false;
 
     function handleHeaderScroll() {
-        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        if (header) {
-            if (scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        if (!isHeaderScrollQueued) {
+            window.requestAnimationFrame(function() {
+                var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                if (header) {
+                    if (scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                }
+                isHeaderScrollQueued = false;
+            });
+            isHeaderScrollQueued = true;
         }
     }
 
@@ -103,14 +110,22 @@ window.idryInit = function () {
 
     // --- Sticky Call Bar ---
     var stickyCallBar = document.getElementById('stickyCallBar');
+    var isStickyBarQueued = false;
 
     function handleStickyBar() {
         if (!stickyCallBar) return;
-        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollY > 400) {
-            stickyCallBar.classList.add('visible');
-        } else {
-            stickyCallBar.classList.remove('visible');
+        
+        if (!isStickyBarQueued) {
+            window.requestAnimationFrame(function() {
+                var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollY > 400) {
+                    stickyCallBar.classList.add('visible');
+                } else {
+                    stickyCallBar.classList.remove('visible');
+                }
+                isStickyBarQueued = false;
+            });
+            isStickyBarQueued = true;
         }
     }
 
