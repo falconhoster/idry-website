@@ -27,27 +27,16 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr = context.payload.pull_request;
-            const owner = context.repo.owner;
             const author = pr.user.login;
 
             console.log(`PR #${pr.number} by ${author} — auto-merging...`);
 
-            // Approve the PR first
-            await github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pr.number,
-              event: 'APPROVE',
-              body: `Auto-approved — PR is from trusted author (${author}).`
-            });
-
-            // Merge the PR
             try {
               await github.rest.pulls.merge({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: pr.number,
-                merge_method: 'merge' // Options: 'merge', 'squash', 'rebase'
+                merge_method: 'squash'
               });
               console.log(`PR #${pr.number} merged successfully.`);
             } catch (error) {
@@ -57,7 +46,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: pr.number,
-                merge_method: 'merge'
+                merge_method: 'squash'
               });
               console.log(`PR #${pr.number} merged on retry.`);
             }
