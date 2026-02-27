@@ -144,6 +144,9 @@ window.idryInit = function () {
             var targetId = this.getAttribute('href');
             if (targetId === '#') return;
 
+            // On mobile, skip smooth scroll for dropdown toggle links
+            if (window.innerWidth < 1024 && this.closest('.has-dropdown')) return;
+
             var target = document.querySelector(targetId);
             if (target) {
                 e.preventDefault();
