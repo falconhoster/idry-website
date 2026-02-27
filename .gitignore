@@ -10,3 +10,4 @@ desktop.ini
 # Claude Code memory
 .claude/
 optimize_images.py
+_run.py
